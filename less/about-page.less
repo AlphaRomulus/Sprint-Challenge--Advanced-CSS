@@ -1,0 +1,63 @@
+.about{
+
+
+   
+}
+
+.contact-section{
+    margin:5rem 0;
+    .flex(row,left,left);
+    @media @phone{
+        .flex(column-reverse,center,center);
+    }
+    img{
+        height:auto;
+        width:100%;
+    }
+    .contact-form{
+        width:50%;
+        padding:2rem;
+        @media @phone{
+            width:90%;
+        }
+        
+            
+        form{
+            .flex(column,left,left);
+            font-size:2rem;
+
+            input,select,textarea{
+                border-radius: .5rem;
+                border: 1px solid #ddd;
+                padding:1rem;
+                font-size:2rem;
+                margin:0 0 1rem 0;
+            }
+
+            textarea{
+                min-height:9rem;
+            }
+
+            .btn{
+                .btn(teal);
+            }
+            
+        }
+   
+    }
+
+    .contact-message{
+        width:50%;
+        padding:2rem;
+        border-bottom:1px solid #ddd;
+        @media @phone{
+            width:90%;
+            p,h2{
+                margin:1rem 0;
+            }
+        }
+        img{
+            border-radius: 2rem;
+        }
+    }
+}
