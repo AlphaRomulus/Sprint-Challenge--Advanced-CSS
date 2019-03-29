@@ -28,8 +28,36 @@
     </nav>
   </header> 
 
-  <div class="container home">
+  <div class="container about">
+        <header class="section-header">
 
+        </header>
+        <section class="contact-section">
+            
+            <div class="contact-form">
+                <form action="contact-form-submitted.html" method="POST"> 
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                    <input type="submit" class="btn" value="Submit">
+                </form>
+            </div>
+            <div class="contact-message">
+                <img src="img/launch.png">
+                <h2>Lets Talk Space!</h2>
+                <p>Looking to collaborate? Maybe you just want to talk about space? Perhaps, you are an educator looking to coordinate a space talk event for your students. What ever your mission maybe, you can reach here.</p>
+            </div>
+
+        </section>
         <footer>
             <p>Copyright SpaceWalkers 2018</p>
         </footer>

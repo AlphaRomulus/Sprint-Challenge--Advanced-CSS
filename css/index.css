@@ -156,8 +156,8 @@ p {
   line-height: 1.4;
 }
 .container {
-  max-width: 800px;
   width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 .navigation {
@@ -300,6 +300,92 @@ p {
   width: 100%;
   height: auto;
   border-radius: 1rem;
+}
+.contact-section {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: row;
+  align-content: left;
+  align-items: left;
+}
+@media (max-width:500px) {
+  .contact-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: center;
+  }
+}
+.contact-section img {
+  height: auto;
+  width: 100%;
+}
+.contact-section .contact-form {
+  width: 50%;
+  padding: 2rem;
+}
+@media (max-width:500px) {
+  .contact-section .contact-form {
+    width: 90%;
+  }
+}
+.contact-section .contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-content: left;
+  align-items: left;
+  font-size: 2rem;
+}
+.contact-section .contact-form form input,
+.contact-section .contact-form form select,
+.contact-section .contact-form form textarea {
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+}
+.contact-section .contact-form form textarea {
+  min-height: 9rem;
+}
+.contact-section .contact-form form .btn {
+  font-size: 1.8rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+  background: teal;
+  width: 10rem;
+  font-weight: 700;
+}
+@media (max-width:500px) {
+  .contact-section .contact-form form .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 2.7rem;
+  }
+}
+.contact-section .contact-form form .btn:hover {
+  background: white;
+  color: teal;
+  border: 1px solid #454A59;
+}
+.contact-section .contact-message {
+  width: 50%;
+  padding: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+@media (max-width:500px) {
+  .contact-section .contact-message {
+    width: 90%;
+  }
+  .contact-section .contact-message p,
+  .contact-section .contact-message h2 {
+    margin: 1rem 0;
+  }
+}
+.contact-section .contact-message img {
+  border-radius: 2rem;
 }
 footer {
   color: #22283B;
