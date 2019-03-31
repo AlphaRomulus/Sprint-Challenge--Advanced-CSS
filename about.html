@@ -29,11 +29,46 @@
   </header> 
 
   <div class="container home">
+    <section>
+      <b>API URL:</b>
+      <pre id="reqObject"></pre>
+      
+      
+      <img id="apod_img_id" width="250px"/>
+      
+      <iframe id="apod_vid_id" type="text/html" width="640" height="385" frameborder="0"></iframe>
+      <p id="copyright"></p>
+      
+      <h3 id="apod_title"></h3>
+      <p id="apod_explaination"></p>
+      <br/>
+      <b>Return Object:</b>
+      <pre id="returnObject"></pre>
+    </section>
 
-        <footer>
-            <p>Copyright SpaceWalkers 2018</p>
-        </footer>
+    <footer>
+        <p>Copyright SpaceWalkers 2018</p>
+    </footer>
           
-    </div>
+  </div>
+
+    <script>
+      var url = "https://api.nasa.gov/planetary/apod?api_key=o7DqhX9fegoNzn2fEVa6AU2ADgJ9CqJuuXKEedz0";
+
+      var xhr = new XMLHttpRequest();
+        xhr.open('GET', url);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                let obj = JSON.parse(xhr.responseText);
+                console.log(obj);
+                
+                document.getElementById("apod_img_id").src=obj.url;
+            }
+            else {
+                alert('Request failed.  Returned status of ' + xhr.status);
+            }
+      };
+      xhr.send();
+    </script>
 </body>
 </html>
